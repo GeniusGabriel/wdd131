@@ -1,0 +1,246 @@
+/* =========================================================
+   1. ROOT VARIABLES & GLOBAL RESET
+   ========================================================= */
+:root {
+    --primary-color: #1b4332;
+    /* Deep Forest Emerald */
+    --secondary-color: #2d3748;
+    /* Slate Charcoal (Navbar) */
+    --accent-color: #d97706;
+    /* Warm Amber / Gold (Hover) */
+    --bg-light: #f7fafc;
+    /* Soft Clean Gray/White */
+    --card-bg: #ffffff;
+    /* Card White */
+    --text-dark: #1a202c;
+    /* High-contrast body text */
+    --text-light: #ffffff;
+    /* White text for dark headers */
+    --border-color: #e2e8f0;
+    /* Subtle border gray */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* =========================================================
+   2. HEADER & NAVIGATION
+   ========================================================= */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Step 3.3: Set span in header to display: block */
+header span#course-title {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1.25rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Step 3.4: CSS Flex on navigation nav */
+nav {
+    display: flex;
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    flex: 1 1 auto;
+    display: block;
+    color: var(--text-light);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.85rem 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Step 3.5: Hover effect */
+nav a:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* =========================================================
+   3. MAIN CONTENT LAYOUT (CSS GRID)
+   ========================================================= */
+/* Step 3.6: Limited width and centered horizontally */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    /* Step 3.7: CSS Grid for main column cards */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+}
+
+/* Heading spans across both grid columns */
+main h1 {
+    grid-column: 1 / -1;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Card Containers */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 1.5rem 1rem 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+/* Card Internal Layouts (Side-by-side rows) */
+.card-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1rem 1.25rem;
+}
+
+.card-row:last-of-type {
+    grid-template-columns: 1fr 2fr;
+}
+
+.flag-box {
+    text-align: center;
+}
+
+.flag-box .caption {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 0.35rem;
+    color: #4a5568;
+}
+
+/* Responsive Image Controls */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card img {
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.card img[src*="profile"] {
+    width: 170px;
+}
+
+.card img[src*="flag"] {
+    width: 200px;
+}
+
+/* Resource List in Card 2 */
+.card ul {
+    list-style-type: disc;
+    padding: 1.25rem 2.25rem;
+}
+
+.card ul li {
+    margin-bottom: 0.75rem;
+}
+
+.card ul li a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.card ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================================
+   4. FOOTER
+   ========================================================= */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.35rem 0;
+}
+
+footer #lastModified {
+    color: #e2e8f0;
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   5. RESPONSIVE MEDIA QUERY (Mobile View)
+   ========================================================= */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .card-row,
+    .card-row:last-of-type {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .card img {
+        margin: 1rem auto;
+    }
+}
