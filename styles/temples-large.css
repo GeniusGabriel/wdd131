@@ -1,0 +1,51 @@
+@media only screen and (min-width: 640px) {
+
+    /* Header switch: Horizontal row layout */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 2rem;
+    }
+
+    /* Hide the hamburger button on screens >= 640px */
+    #menu {
+        display: none;
+    }
+
+    /* Nav flexbox: Horizontal row */
+    nav {
+        width: auto;
+    }
+
+    nav ul {
+        display: flex !important;
+        /* Always visible on desktop */
+        flex-direction: row;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 0.85rem;
+        font-size: 1rem;
+        border-bottom: 2px solid transparent;
+        border-radius: 4px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        background-color: rgba(255, 255, 255, 0.12);
+        border-bottom: 2px solid var(--accent-color);
+    }
+
+    /* Multi-column Grid for Cards (3 per row) */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+
+    figure {
+        max-width: 100%;
+    }
+}
