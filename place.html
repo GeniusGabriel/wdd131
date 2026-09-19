@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Country Page for Gabriel Awushie-Tetteh">
+    <meta name="author" content="Gabriel Awushie-Tetteh">
+    <title>My Country Page WDD131</title>
+
+    <link rel="stylesheet" href="../styles/place.css">
+    <script src="../scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ghana</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 900px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 550px)">
+                <img src="images/hero-small.jpg" alt="Scenic view of Ghana" width="500" height="300">
+            </picture>
+
+            <section class="card data-card">
+                <h2>Data</h2>
+                <ul class="stats-list">
+                    <li><span class="label">Area:</span> <span class="value">238,535 sq km</span></li>
+                    <li><span class="label">Population:</span> <span class="value">33,475,870</span></li>
+                    <li><span class="label">Capital:</span> <span class="value">Accra</span></li>
+                    <li><span class="label">Languages:</span> <span class="value">English, Akan</span></li>
+                    <li><span class="label">Currency:</span> <span class="value">Ghana Cedi (GHS)</span></li>
+                    <li><span class="label">Time Zone:</span> <span class="value">UTC+0 (GMT)</span></li>
+                    <li><span class="label">Calling Code:</span> <span class="value">+233</span></li>
+                    <li><span class="label">Internet TLD:</span> <span class="value">.gh</span></li>
+                </ul>
+            </section>
+
+    <section class="card weather-card">
+        <h2 class="weather-title">Weather</h2>
+        <div class="weather-icon-mobile">
+            <img src="images/weather.svg" alt="Weather icon" width="48" height="48">
+        </div>
+        <ul class="stats-list">
+            <li><span class="label">Temperature:</span> <span class="value" id="temp">27</span> &deg;C</li>
+            <li><span class="label">Conditions:</span> <span class="value">Rainy</span></li>
+            <li><span class="label">Wind:</span> <span class="value" id="wind-speed">12</span> km/h</li>
+            <li><span class="label">Wind Chill:</span> <span class="value" id="wind-chill">N/A</span></li>
+        </ul>
+    </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> 🌴 Gabriel Awushie-Tetteh 🌴 Ghana</p>
+        <p id="last-modified"></p>
+    </footer>
+
+</body>
+
+</html>

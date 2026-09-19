@@ -1,0 +1,194 @@
+
+:root {
+
+  --ghana-red: #b30e20; 
+
+    --ghana-gold: #fcd116;
+    --ghana-green: #005230;
+    --ghana-black: #111111;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --text-color: #1a1a1a;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: #f4f5f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+    max-width: 950px;
+    background-color: var(--ghana-red);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    border-bottom: 6px solid var(--ghana-gold);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Main & Hero Container */
+main {
+    width: 100%;
+    max-width: 950px;
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero picture,
+.hero picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Card Styling (Mobile-first stacked layout) */
+.card {
+    background-color: var(--card-bg);
+    margin: 1.25rem auto;
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(17, 17, 17, 0.15);
+    border-left: 6px solid var(--ghana-gold);
+}
+
+/* Card Headings */
+.card h2 {
+    background-color: var(--ghana-green);
+    color: #ffffff;
+    padding: 0.35rem 0.9rem;
+    font-size: 1.2rem;
+    display: inline-block;
+    border-radius: 3px;
+    margin-bottom: 0.85rem;
+    border-bottom: 2px solid var(--ghana-gold);
+}
+
+/* Mobile Weather Icon */
+.weather-icon-mobile {
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+}
+
+.weather-icon-mobile img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Data / Weather Key-Value Lists */
+.stats-list {
+    list-style: none;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+    font-size: 0.95rem;
+}
+
+.stats-list .label {
+    font-weight: 700;
+    color: var(--ghana-black);
+}
+
+.stats-list .value {
+    color: #333333;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    max-width: 950px;
+    background-color: var(--ghana-green);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    margin-top: auto;
+    border-top: 5px solid var(--ghana-gold);
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+/* 2. Media Query for Desktop / Large View */
+@media (min-width: 768px) {
+    .hero {
+        display: block;
+        
+    }
+
+
+    .data-card {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 290px;
+        margin: 0;
+    }
+
+    
+    .weather-card {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        width: 290px;
+        margin: 0;
+    }
+
+    
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Flex container for weather title to align with pseudo-element */
+    .weather-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* 4. Pseudo-element requirement: Weather icon inserted after heading */
+    .weather-title::after {
+        content: "";
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background-image: url("../images/weather-icon.svg");
+        /* path to your icon */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+    }
+}
