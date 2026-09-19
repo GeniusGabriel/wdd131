@@ -192,3 +192,24 @@ footer p {
         vertical-align: middle;
     }
 }
+@media (min-width: 768px) {
+
+    /* Hide the mobile standalone <img> */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Target the Weather heading */
+    .weather-card h2::after {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+        background-image: url("../images/weather.svg");
+        /* Reference to your SVG */
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
