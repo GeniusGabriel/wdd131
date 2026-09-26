@@ -11,7 +11,7 @@ if (lastModifiedSpan) {
 }
 
 // In scripts/place.js:
-const temperature = 27; // Match what is visible on your card
+const temperature = 27; 
 const windSpeed = 12;
 
 const calculateWindChill = (temp, speed) =>
