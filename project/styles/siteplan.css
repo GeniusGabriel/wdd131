@@ -1,12 +1,8 @@
 :root {
     --primary-color: #0b5d1e;
-    /* PKAB Forest Green */
     --secondary-color: #f5b301;
-    /* PKAB Golden Yellow */
     --neutral-dark: #222222;
-    /* Charcoal text */
     --neutral-light: #f8faf7;
-    /* Off-white background */
     --white: #ffffff;
     --border: #dcdcdc;
 }
@@ -96,7 +92,7 @@ li {
     border: 1px solid var(--border);
 }
 
-/* Color Schema Display */
+/* Color Schema Swatches */
 .color-palette {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -119,21 +115,59 @@ li {
     font-weight: 700;
 }
 
+.swatch-primary {
+    background-color: #0b5d1e;
+    color: #ffffff;
+}
+
+.swatch-secondary {
+    background-color: #f5b301;
+    color: #111111;
+}
+
+.swatch-dark {
+    background-color: #222222;
+    color: #ffffff;
+}
+
 .color-info {
     padding: 0.75rem;
     font-size: 0.85rem;
 }
 
 /* Typography Specimens */
+.font-preview {
+    margin-top: 1rem;
+}
+
 .font-specimen {
     border: 1px solid var(--border);
     border-left: 5px solid var(--primary-color);
     padding: 1rem;
     border-radius: 4px;
-    margin-top: 0.75rem;
+}
+
+.body-specimen {
+    margin-top: 1.25rem;
+}
+
+.sample-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+}
+
+.sample-body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0.5rem 0;
 }
 
 /* Wireframe Diagrams */
+.desktop-wireframe-heading {
+    margin-top: 2rem;
+}
+
 .wireframe-diagram {
     margin-top: 1rem;
     padding: 1rem;
@@ -158,6 +192,14 @@ li {
 .wf-row {
     display: flex;
     gap: 0.5rem;
+}
+
+.wf-col-1 {
+    flex: 1;
+}
+
+.wf-col-2 {
+    flex: 2;
 }
 
 .mobile-wireframe {
