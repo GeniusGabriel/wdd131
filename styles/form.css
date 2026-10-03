@@ -1,0 +1,205 @@
+:root {
+    --primary: #3a225d;
+    --primary-light: #52307c;
+    --secondary: #efac3e;
+    --neutral-dark: #222222;
+    --neutral-light: #f7f6f9;
+    --white: #ffffff;
+    --border: #cccccc;
+    --radius: 6px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 1.75rem;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form Container */
+form {
+    background: var(--white);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Fields & Labels */
+form>label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.35rem;
+}
+
+form>label:first-of-type {
+    margin-top: 0;
+}
+
+.optional {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #666666;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-light);
+    border-color: transparent;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    margin-top: 1.25rem;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    color: var(--neutral-dark);
+}
+
+.subtext {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 0.5rem;
+}
+
+/* Star Rating Radio Row */
+.stars {
+    display: flex;
+    justify-content: space-between;
+    max-width: 320px;
+    margin-top: 0.5rem;
+}
+
+.stars label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #d19000;
+}
+
+.stars input[type="radio"] {
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}
+
+/* Checkbox Labels */
+.features-fieldset label {
+    display: block;
+    margin: 0.4rem 0;
+    cursor: pointer;
+}
+
+.features-fieldset input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 1.75rem;
+    padding: 0.85rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-light);
+}
+
+/* Confirmation Card (review.html) */
+.confirmation-card {
+    background: var(--white);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.confirmation-card h2 {
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.confirmation-card p {
+    margin-bottom: 1rem;
+}
+
+.cta-link {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+
+.cta-link:hover {
+    background-color: var(--primary-light);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #666666;
+    border-top: 1px solid var(--border);
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form - Gabriel Awushie-Tetteh | WDD131</title>
+    <meta name="description"
+        content="Product review form allowing users to select products, provide star ratings, installation dates, and written feedback.">
+    <meta name="author" content="Gabriel Awushie-Tetteh">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <!-- 1. Product Name -->
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- Dynamic options populated by form.js -->
+            </select>
+
+            <!-- 2. Overall Rating -->
+            <fieldset class="rating-fieldset">
+                <legend>Overall Rating</legend>
+                <div class="stars">
+                    <label for="star1">
+                        <input type="radio" id="star1" name="rating" value="1" required>
+                        &star;
+                    </label>
+                    <label for="star2">
+                        <input type="radio" id="star2" name="rating" value="2" required>
+                        &star;&star;
+                    </label>
+                    <label for="star3">
+                        <input type="radio" id="star3" name="rating" value="3" required>
+                        &star;&star;&star;
+                    </label>
+                    <label for="star4">
+                        <input type="radio" id="star4" name="rating" value="4" required>
+                        &star;&star;&star;&star;
+                    </label>
+                    <label for="star5">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        &star;&star;&star;&star;&star;
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- 3. Date of Installation -->
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <!-- 4. Useful Features -->
+            <fieldset class="features-fieldset">
+                <legend>Which features did you find useful in the product?</legend>
+                <p class="subtext">(Check all that apply)</p>
+                <label for="feature-durability">
+                    <input type="checkbox" id="feature-durability" name="features" value="durability">
+                    Durability
+                </label>
+                <label for="feature-ease">
+                    <input type="checkbox" id="feature-ease" name="features" value="ease_of_use">
+                    Ease of Use
+                </label>
+                <label for="feature-performance">
+                    <input type="checkbox" id="feature-performance" name="features" value="performance">
+                    Performance
+                </label>
+                <label for="feature-design">
+                    <input type="checkbox" id="feature-design" name="features" value="design">
+                    Design
+                </label>
+            </fieldset>
+
+            <!-- 5. Written Review -->
+            <label for="review">Written Review <span class="optional">(Optional)</span></label>
+            <textarea id="review" name="review" rows="4" placeholder="Share your experience..."></textarea>
+
+            <!-- 6. User Name -->
+            <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="userName" name="userName" placeholder="Your Name">
+
+            <!-- 7. Submit Button -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear">2026</span> 🌸 Gabriel Awushie-Tetteh 🌸 Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
