@@ -203,3 +203,21 @@ footer {
     color: #666666;
     border-top: 1px solid var(--border);
 }
+/* Responsive Layout */
+@media screen and (min-width: 600px) {
+    body {
+        padding: 2.5rem 1rem;
+    }
+
+    form {
+        padding: 2.5rem 3rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .stars {
+        max-width: 360px;
+    }
+}
