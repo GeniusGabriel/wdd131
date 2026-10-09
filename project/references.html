@@ -6,36 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>References &amp; Attributions — PKAB Gas</title>
     <meta name="description"
-        content="Attribution and references page documenting content sources, typography, imagery, and development tools for the PKAB Gas website.">
+        content="Attributions, data sources, and image credits for the PKAB Gas WDD 131 web project.">
     <meta name="author" content="Gabriel Awushie-Tetteh">
 
+    <!-- Typography: Montserrat & Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
 
+    <!-- Core Stylesheet and Deferred Script -->
     <link rel="stylesheet" href="styles/project.css">
     <script src="scripts/project.js" defer></script>
 </head>
 
 <body>
 
+    <!-- Site Header & Navigation -->
     <header>
         <div class="header-container">
             <a href="index.html" class="brand-link">
-                <img src="images/pkabgas-logo.jpg" alt="PKAB Gas Logo" class="brand-logo" width="55" height="55">
+                <img src="images/pkabgas-logo.jpg" alt="PKAB Gas Official Logo" class="brand-logo" width="55"
+                    height="55">
                 <div class="brand-text">
                     <span class="brand-title">PKAB Gas</span>
                     <small class="brand-tagline">For your reliable L.P.G solutions</small>
                 </div>
             </a>
 
+            <!-- Mobile Hamburger Toggle Button -->
             <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
+            <!-- Primary Navigation Links -->
             <nav id="primary-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -49,56 +55,54 @@
     </header>
 
     <main>
-        <section class="hero-wrapper">
-            <div class="hero-container" style="display: block; text-align: center;">
-                <span class="hero-slogan">Project Documentation</span>
-                <h1>References &amp; Attributions</h1>
-                <p>Documenting design assets, typography, safety guidelines, and regulatory data sources used throughout
-                    the PKAB Gas web platform.</p>
-            </div>
-        </section>
-
         <section id="references-section">
-            <h2>Source Credits</h2>
-            <p class="section-desc">All assets and materials utilized in this project adhere to fair educational and
-                authorized commercial use.</p>
+            <h2>References &amp; Project Attributions</h2>
+            <p class="section-desc">Documentation of imagery, data sources, code resources, and safety authorities used
+                to build the PKAB Gas web application.</p>
 
             <div class="services-grid">
+                <!-- Visual Assets & Media Credits -->
                 <article class="service-card">
-                    <h3>Branding &amp; Identity</h3>
-                    <p><strong>Brand Assets:</strong> Official registered trademark, cylinder logo, and company slogan
-                        supplied by PKAB CO. LTD (PKAB Gas, Ghana).</p>
-                    <p style="margin-top: 0.5rem;"><strong>File:</strong> <code>images/pkabgas-logo.jpg</code></p>
+                    <h3>Visual Assets &amp; Media</h3>
+                    <p><strong>Brand Logo:</strong> Official corporate brand emblem provided by PKAB CO. LTD.</p>
+                    <p style="margin-top: 0.75rem;"><strong>Forecourt &amp; Safety Image
+                            (<code>pkab-forecourt.jpg</code>):</strong> AI-assisted concept visualization generated
+                        specifically to represent forecourt scale inspections, protective gear, and local dispensing
+                        operations.</p>
+                    <p style="margin-top: 0.75rem;"><strong>Bulk Supply Asset (<code>bulk.webp</code>):</strong>
+                        Commercial supply logistics asset optimized in modern WebP format for fast below-the-fold
+                        delivery.</p>
                 </article>
 
+                <!-- Technical Standards & Development Frameworks -->
                 <article class="service-card">
-                    <h3>Typography &amp; Fonts</h3>
-                    <p><strong>Primary Heading:</strong> <a href="https://fonts.google.com/specimen/Montserrat"
-                            target="_blank" rel="noopener">Montserrat</a> (Google Fonts)</p>
-                    <p style="margin-top: 0.5rem;"><strong>Body Copy:</strong> <a
-                            href="https://fonts.google.com/specimen/Open+Sans" target="_blank" rel="noopener">Open
-                            Sans</a> (Google Fonts)</p>
+                    <h3>Technical &amp; Code Resources</h3>
+                    <p><strong>Fonts:</strong> <em>Montserrat</em> and <em>Open Sans</em> served via <a
+                            href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a>.</p>
+                    <p style="margin-top: 0.75rem;"><strong>HTML5 &amp; CSS3 Standards:</strong> Web markup, CSS custom
+                        properties, and accessible semantic structures aligned with <a
+                            href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a> and
+                        verified by the <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Markup
+                            Validator</a>.</p>
+                    <p style="margin-top: 0.75rem;"><strong>Icons &amp; Formatting:</strong> Standard Unicode glyphs and
+                        semantic HTML entities.</p>
                 </article>
 
+                <!-- Operational LPG Data & Industry Guidelines -->
                 <article class="service-card highlight-card">
-                    <h3>Regulatory &amp; Safety Standards</h3>
-                    <p>LPG safety rules, cylinder handling protocols, and retail pricing references adapted from
-                        official industry standards published by the <strong>National Petroleum Authority (NPA)
-                            Ghana</strong> and the <strong>Energy Commission of Ghana</strong>.</p>
+                    <h3>Industry Data &amp; Safety Guidelines</h3>
+                    <p><strong>Safety Protocols:</strong> Cylinder handling procedures, ventilation rules, and soapy
+                        water bubble leak-test standards formulated from advisories by the <em>National Petroleum
+                            Authority (NPA) Ghana</em> and the <em>Ghana National Fire Service (GNFS)</em>.</p>
+                    <p style="margin-top: 0.75rem;"><strong>Pricing Calibrations:</strong> Cylinder categories (6kg,
+                        14.5kg, 50kg) and indicative autogas rates modeled from operational retail benchmarks regulated
+                        under Ghana's Energy Commission frameworks.</p>
                 </article>
-            </div>
-
-            <div class="callout-row" style="margin-top: 2rem;">
-                <div class="callout-box" style="grid-column: 1 / -1;">
-                    <h3>Academic Declaration</h3>
-                    <p>This website was created by <strong>Gabriel Awushie-Tetteh</strong> as the final course project
-                        for <strong>WDD 131: Dynamic Web Fundamentals</strong> at BYU-Pathway Worldwide / Brigham Young
-                        University–Idaho.</p>
-                </div>
             </div>
         </section>
     </main>
 
+    <!-- Site Footer -->
     <footer>
         <div class="footer-container">
             <p>&copy; <span id="currentyear">2026</span> 🌸 PKAB Gas (PKAB CO. LTD) 🌸 Gabriel Awushie-Tetteh</p>
