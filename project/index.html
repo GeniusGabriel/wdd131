@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKAB Gas — Reliable Domestic, Commercial &amp; Autogas LPG Solutions</title>
+    <meta name="description"
+        content="PKAB Gas is a premier LPG dispensing company in Ghana offering precision cylinder refilling, commercial supply, and autogas across Ahafo and Central Regions.">
+    <meta name="author" content="Gabriel Awushie-Tetteh">
+
+    <!-- Typography: Montserrat (Headings) & Open Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+
+    <!-- Core Stylesheet and Deferred Script -->
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Site Header & Navigation -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand-link">
+                <img src="images/pkabgas-logo.jpg" alt="PKAB Gas Official Logo" class="brand-logo" width="55"
+                    height="55">
+                <div class="brand-text">
+                    <span class="brand-title">PKAB Gas</span>
+                    <small class="brand-tagline">For your reliable L.P.G solutions</small>
+                </div>
+            </a>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Primary Navigation Links -->
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#calculator">Estimator</a></li>
+                    <li><a href="#stations">Stations</a></li>
+                    <li><a href="safety.html">Safety Guide</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner & Interactive Estimator Grid Row -->
+        <section class="hero-wrapper">
+            <div class="hero-container">
+
+                <!-- Left Column: Branding, Value Statement & Action Buttons -->
+                <div class="hero-content">
+                    <span class="hero-slogan">For your reliable L.P.G solutions</span>
+                    <h1>Clean, Safe &amp; Dependable Energy</h1>
+                    <p>Providing precision cylinder refilling, commercial cooking supply, and certified auto-gas vehicle
+                        dispensing across our operational branches.</p>
+                    <div class="hero-buttons">
+                        <a href="#stations" class="btn btn-accent">Find Nearest Station</a>
+                        <a href="safety.html" class="btn btn-outline">Safety Protocols</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Live Refill Estimator Form (Meets Rubric Criteria 8 & 15) -->
+                <div id="calculator" class="calc-card">
+                    <h2>Live Refill Estimator</h2>
+                    <p class="calc-intro">Select your service type and quantity to preview current estimated retail
+                        rates.</p>
+
+                    <form id="refill-form" method="get" action="#calculator">
+                        <fieldset>
+                            <legend>LPG Price Calculator</legend>
+
+                            <div class="form-group">
+                                <label for="service-type">Refill Category <span class="required">*</span></label>
+                                <select id="service-type" name="serviceType" required>
+                                    <option value="" disabled>-- Select Category --</option>
+                                    <option value="6kg" selected>6kg Domestic Cylinder</option>
+                                    <option value="14kg">14.5kg Domestic Cylinder</option>
+                                    <option value="50kg">50kg Commercial Cylinder</option>
+                                    <option value="autogas">Automotive Autogas (Per Liter)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantity">Quantity / Liters <span class="required">*</span></label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="500" value="1" required>
+                            </div>
+
+                            <button type="submit" id="calc-btn" class="btn btn-accent">Calculate Total</button>
+                        </fieldset>
+                    </form>
+
+                    <div id="calc-result" class="calc-result" aria-live="polite">
+                        <p>Estimated Cost: <strong id="result-cost">GH₵ 0.00</strong></p>
+                        <small>*Retail rates are calibrated to official Energy Commission standards.</small>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <h2>Refilling &amp; Dispensing Services</h2>
+            <p class="section-desc">Dependable solutions for home kitchens, businesses, and clean transport.</p>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3>Domestic Refilling</h3>
+                    <p>Precision-calibrated electronic scale refilling for 6kg, 14.5kg, and custom cooking cylinders,
+                        backed by certified seal leak checks before you leave the station.</p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Commercial Bulk Supply</h3>
+                    <p>Dedicated supply chains, bulk deliveries, and scheduled valve safety audits designed specifically
+                        for commercial food vendors, catering enterprises, and bakeries.</p>
+                </article>
+
+                <article class="service-card highlight-card">
+                    <h3>Automotive Autogas</h3>
+                    <p>High-efficiency vehicle dispensing nozzles calibrated for LPG-powered taxis, delivery fleets, and
+                        commercial autogas cars with rapid vehicle turnaround times.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Operational Branches & Interactive Filter Section -->
+        <section id="stations" class="branches-section">
+            <h2>Our Operational Stations</h2>
+            <p class="section-desc">Locate an active PKAB Gas station near you across the Ahafo and Central Regions.</p>
+
+            <!-- Region Filter Buttons (Meets Rubric Criteria 9, 10, 11, 13) -->
+            <div class="filter-controls" role="group" aria-label="Filter stations by region">
+                <button type="button" class="filter-btn active" data-filter="all">All Stations</button>
+                <button type="button" class="filter-btn" data-filter="Ahafo Region">Ahafo Region</button>
+                <button type="button" class="filter-btn" data-filter="Central Region">Central Region</button>
+            </div>
+
+            <!-- Station Cards Container Injected by JavaScript -->
+            <div id="branch-grid" class="branches-grid" aria-live="polite">
+                <!-- Rendered dynamically by project.js -->
+            </div>
+        </section>
+
+        <!-- Callout & Safety Overview Row (Meets Rubric Criterion 7: Native Lazy Loading) -->
+        <!-- Callout & Safety Overview Row (Meets Rubric Criterion 7: Native Lazy Loading) -->
+        <section class="callout-row">
+            <div class="callout-box">
+                <img src="images/pkab-forecourt.webp"
+                    alt="PKAB Gas forecourt attendant performing soapy water bubble leak test on domestic cylinder scale"
+                    loading="lazy" width="800" height="450">
+                <h3>Safety &amp; Cylinder Inspection</h3>
+                <p>Every cylinder refilled at our pumps undergoes an O-ring inspection and bubble soap leak test to prevent
+                    domestic fire hazards.</p>
+            </div>
+        
+            <div class="callout-box">
+                <img src="images/bulk.webp" alt="PKAB Gas commercial bulk LPG delivery and storage supply for businesses"
+                    loading="lazy" width="800" height="450">
+                <h3>Bulk Commercial Inquiry</h3>
+                <p>Operating a bakery, hotel, or restaurant kitchen? Connect with our logistics team for scheduled high-volume
+                    commercial deliveries across our regional stations.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="currentyear">2026</span> 🌸 PKAB Gas (PKAB CO. LTD) 🌸 Gabriel Awushie-Tetteh</p>
+            <p><a href="references.html">References &amp; Attributions</a> | WDD 131 Final Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

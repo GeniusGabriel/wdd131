@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References &amp; Attributions — PKAB Gas</title>
+    <meta name="description"
+        content="Attribution and references page documenting content sources, typography, imagery, and development tools for the PKAB Gas website.">
+    <meta name="author" content="Gabriel Awushie-Tetteh">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand-link">
+                <img src="images/pkabgas-logo.jpg" alt="PKAB Gas Logo" class="brand-logo" width="55" height="55">
+                <div class="brand-text">
+                    <span class="brand-title">PKAB Gas</span>
+                    <small class="brand-tagline">For your reliable L.P.G solutions</small>
+                </div>
+            </a>
+
+            <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#calculator">Estimator</a></li>
+                    <li><a href="index.html#stations">Stations</a></li>
+                    <li><a href="safety.html">Safety Guide</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-wrapper">
+            <div class="hero-container" style="display: block; text-align: center;">
+                <span class="hero-slogan">Project Documentation</span>
+                <h1>References &amp; Attributions</h1>
+                <p>Documenting design assets, typography, safety guidelines, and regulatory data sources used throughout
+                    the PKAB Gas web platform.</p>
+            </div>
+        </section>
+
+        <section id="references-section">
+            <h2>Source Credits</h2>
+            <p class="section-desc">All assets and materials utilized in this project adhere to fair educational and
+                authorized commercial use.</p>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3>Branding &amp; Identity</h3>
+                    <p><strong>Brand Assets:</strong> Official registered trademark, cylinder logo, and company slogan
+                        supplied by PKAB CO. LTD (PKAB Gas, Ghana).</p>
+                    <p style="margin-top: 0.5rem;"><strong>File:</strong> <code>images/pkabgas-logo.jpg</code></p>
+                </article>
+
+                <article class="service-card">
+                    <h3>Typography &amp; Fonts</h3>
+                    <p><strong>Primary Heading:</strong> <a href="https://fonts.google.com/specimen/Montserrat"
+                            target="_blank" rel="noopener">Montserrat</a> (Google Fonts)</p>
+                    <p style="margin-top: 0.5rem;"><strong>Body Copy:</strong> <a
+                            href="https://fonts.google.com/specimen/Open+Sans" target="_blank" rel="noopener">Open
+                            Sans</a> (Google Fonts)</p>
+                </article>
+
+                <article class="service-card highlight-card">
+                    <h3>Regulatory &amp; Safety Standards</h3>
+                    <p>LPG safety rules, cylinder handling protocols, and retail pricing references adapted from
+                        official industry standards published by the <strong>National Petroleum Authority (NPA)
+                            Ghana</strong> and the <strong>Energy Commission of Ghana</strong>.</p>
+                </article>
+            </div>
+
+            <div class="callout-row" style="margin-top: 2rem;">
+                <div class="callout-box" style="grid-column: 1 / -1;">
+                    <h3>Academic Declaration</h3>
+                    <p>This website was created by <strong>Gabriel Awushie-Tetteh</strong> as the final course project
+                        for <strong>WDD 131: Dynamic Web Fundamentals</strong> at BYU-Pathway Worldwide / Brigham Young
+                        University–Idaho.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="currentyear">2026</span> 🌸 PKAB Gas (PKAB CO. LTD) 🌸 Gabriel Awushie-Tetteh</p>
+            <p><a href="references.html">References &amp; Attributions</a> | WDD 131 Final Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
